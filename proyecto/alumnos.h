@@ -9,3 +9,10 @@ void buscarAlumnoBecado(AlumnoBecado alumnos[], int cantidad);
 void modificarAlumnoBecado(AlumnoBecado alumnos[], int cantidad);
 void eliminarAlumnoBecado(AlumnoBecado alumnos[], int &cantidad);
 void ordenarAlumnosBecados(AlumnoBecado alumnos[], int cantidad);
+ 
+// ---------- Control de asistencia por turno ----------
+void registrarAsistencia(AlumnoBecado alumnos[], int cantidad, int turno);
+void listarAsistentes(AlumnoBecado alumnos[], int cantidad, int turno);
+void listarFaltantes(AlumnoBecado alumnos[], int cantidad, int turno);
+ 
+#endif

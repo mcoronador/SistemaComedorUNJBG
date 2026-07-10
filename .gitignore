@@ -1,0 +1,19 @@
+# Archivos generados por Dev-C++
+*.o
+*.obj
+*.exe
+*.layout
+*.depend
+*.local
+
+# Carpetas de compilación
+Debug/
+Release/
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Configuración del sistema
+.DS_Store
+Thumbs.db

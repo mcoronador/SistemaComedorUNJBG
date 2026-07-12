@@ -9,5 +9,23 @@ using namespace std;
 struct AlumnoBecado {
     string codigo;
     string nombre;
-    bool asistio; // true si ya puso su huella, false si no
+    bool asistio; // 
 }; 
+
+// Estructura básica para la lista de espera (no becados)
+struct AlumnoNoBecado {
+    string codigo;
+    string nombre;
+    int numeroPrioridad; // Para el orden de llegada
+};
+
+// Estructura para controlar las raciones de cada turno
+struct TurnoComida {
+    string nombreTurno; // "Desayuno", "Almuerzo" o "Cena"
+    int racionesPreparadas;
+    int racionesEntregadas;
+    int racionesSobrantes;
+    bool horarioCerrado;
+};
+
+#endif

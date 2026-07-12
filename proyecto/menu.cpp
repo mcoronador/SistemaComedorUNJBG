@@ -19,14 +19,18 @@ void mostrarSubmenuGestion(const string& nombreTurno) {
     cout << "===========================================================\n";
     cout << "         MENU DE GESTION: [TURNO " << nombreTurno << "]\n";
     cout << "===========================================================\n";
+    cout << "\n----- CONTROL DE ASISTENCIA -----\n";
     cout << "    [1] Registrar Asistencia por Codigo Universitario\n";
     cout << "    [2] Listar Alumnos Becados Asistentes\n";
 	cout << "===========================================================\n";
+	cout << "\n----- LISTA DE ESPERA -----\n";
+
     cout << "    [3] Listar Alumnos Becados Faltantes\n";
     cout << "    [4] Registrar Alumno No Becado en Lista de Espera\n";
     cout << "    [5] Listar Alumnos en la Cola Virtual\n";
     cout << "    [6] Ordenar Cola Virtual\n";
     cout << "===========================================================\n";
+    cout << "\n----- PROCESAMIENTO -----\n";
     cout << "    [7] Cierre de Horario (Calcular Saldos)\n";
     cout << "    [8] Atender Cola Virtual (Asignar platos)\n";
     cout << "    [9] Volver al Menu Principal\n";

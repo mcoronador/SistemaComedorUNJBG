@@ -3,9 +3,10 @@
 #include "estructuras.h"
 
 using namespace std;
-int main()
-{
-     int opcionPrincipal;
+
+int main() {
+
+    int opcionPrincipal;
 
     do {
 
@@ -34,48 +35,20 @@ int main()
                 switch(opSub){
 
                     case 1:
-                          cout << "\n===========================================\n";
-                          cout << "      CONTROL DE ASISTENCIA - " << turno << "\n";
-                          cout << "===========================================\n";
-                          cout << "Ingrese su codigo universitario: ";
-
-                           // Aquí llamar  la función que busca al alumno
-
-                           system("pause");
-                        break;
+                    cout << "\n===== CONTROL DE ASISTENCIA =====\n";
+                    cout << "Ingrese su codigo universitario: ";
+                    system("pause");
+                    break;
 
                     case 9:
                         break;
 
-                    default:
-                        cout << "\nFuncion aun no implementada.\n";
-                        system("pause");
-                }
-
-            }while(opSub != 9);
-
-        }
-        else{
-
-            switch(opcionPrincipal){
-
-                case 4:
-                    cout << "\n[Modulo de Reportes del Integrante 3 - Proximamente]\n";
-                    system("pause");
-                    break;
-
-                case 5:
-                    cout << "\nGracias por usar SIRECO. ¡Cierre de jornada exitoso!\n";
-                    break;
-
-                default:
-                    cout << "\nOpcion no valida.\n";
-                    system("pause");
+                   
             }
 
         }
 
-    }while(opcionPrincipal != 5);
+    
 
     return 0;
 }

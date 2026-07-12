@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o menu.o estructuras.o colavirtual.o alumnos.o
-LINKOBJ  = main.o menu.o estructuras.o colavirtual.o alumnos.o
+OBJ      = main.o menu.o estructuras.o colavirtual.o alumnos.o reportes.o
+LINKOBJ  = main.o menu.o estructuras.o colavirtual.o alumnos.o reportes.o
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -38,3 +38,6 @@ colavirtual.o: colavirtual.cpp
 
 alumnos.o: alumnos.cpp
 	$(CPP) -c alumnos.cpp -o alumnos.o $(CXXFLAGS)
+
+reportes.o: reportes.cpp
+	$(CPP) -c reportes.cpp -o reportes.o $(CXXFLAGS)

@@ -4,7 +4,6 @@
 #include "estructuras.h"
 
 void registrarAsistencia(AlumnoBecado alumnos[], int cantidad);
-
 void listarAsistentes(AlumnoBecado alumnos[], int cantidad);
 
 #endif

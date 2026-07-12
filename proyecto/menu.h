@@ -4,6 +4,6 @@
 #include "estructuras.h"
 
 void mostrarMenuPrincipal();
-void mostrarSubmenuGestion(string nombreTurno);
+void mostrarSubmenuGestion(const string& nombreTurno);
 
 #endif

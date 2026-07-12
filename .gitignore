@@ -5,6 +5,10 @@
 *.layout
 *.depend
 *.local
+# Archivos generados por Dev-C++
+*.gch
+Makefile.win
+
 
 # Carpetas de compilación
 Debug/

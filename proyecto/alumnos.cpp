@@ -41,3 +41,22 @@ void registrarAlumnoBecado(AlumnoBecado alumnos[], int &cantidad, int capacidadM
  
     cout << "\nAlumno becado registrado correctamente.\n";
 }
+
+void listarAlumnosBecados(AlumnoBecado alumnos[], int cantidad) {
+ 
+    cout << "\n==========================================\n";
+    cout << "      LISTA DE ALUMNOS BECADOS\n";
+    cout << "==========================================\n";
+ 
+    if (cantidad == 0) {
+        cout << "No hay alumnos becados registrados.\n";
+        return;
+    }
+ 
+    cout << "CODIGO\t\tNOMBRE\n";
+    cout << "------------------------------------------\n";
+ 
+    for (int i = 0; i < cantidad; i++) {
+        cout << alumnos[i].codigo << "\t" << alumnos[i].nombre << endl;
+    }
+}

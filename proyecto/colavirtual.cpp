@@ -1,33 +1,39 @@
-#include<"colavirtual.h">
+#include "colavirtual.h"
 #include<iostream>
+
 using namespace std;
 
-void registrarcola(Alumno cola[], int &tamanoCola, Alumno nuevoAlumno){
-	cola[tamanoCola]=nuevoAlumno;
-	tamanoCola++;
-	cout<<"Se registro al alumno de forma correcta"<<endl;
+void registrarCola(Alumno cola[], int &tamanoCola, Alumno nuevoAlumno) {
+    cola[tamanoCola] = nuevoAlumno;
+    tamanoCola++;
 }
+
 void mostrarCola(Alumno cola[], int tamanoCola){
-	if(tamanoCola==0){
-		cout<<"La cola se encuentra vacia"<<endl;
-		return;
-	}
-	cout<<"====================================="<<endl;
-	cout<<"|          Alumnos en la cola       |"<<endl;
-	for(int i=0; i<tamanoCola; i++){
-		cout<<i+1<<" "<<cola[i].nombre<<" "<<cola[i].apellido<<endl;
-	}
+    if (tamanoCola == 0){
+        cout<<"La cola virtual esta vacia."<< endl;
+        return;
+    }
+   	cout<<"============================================="<<endl;
+    cout<<"|         ESTADO DE LA COLA VIRTUAL         |"<<endl;
+   	cout<<"============================================="<<endl;
+    for (int i=0; i<tamanoCola; i++) {
+        cout<<i + 1<<". "<<cola[i].nombre<<" "<<cola[i].apellido 
+             <<" ["<<(cola[i].esBecado ? "BECADO" : "PAGANTE")<<"] - Hora: "<<cola[i].horaEntrada<<endl;
+    }
+    cout<<"============================================="<<endl;
 }
-void atenderCola(Alumno cola[], int &tamanoCola){
-	if(tamanoCola==0){
-		cout<<"No se encuentra ningun alumno en la cola"<<endl;	
-		return;
-	}	
-	cout<<"Atencion al "<<cola[0].nombre<<cola[0].apellido<<endl;
-	
-	for(int i=0; i<tamanoCola-1; i++){
-		cola[i]=cola[i+1];
-	}
-	tamanoCola--
-	cout<<"Se actualizo la cola"<<endl;
+
+void ordenarCola(Alumno cola[], int tamanoCola) { 
+    if (tamanoCola<=1) return;
+
+    for (int i=0; i<tamanoCola-1; i++){
+        for (int j=0; j<tamanoCola-i-1; j++){
+            if (!cola[j].esBecado && cola[j+1].esBecado) {
+                Alumno temp=cola[j];
+                cola[j]=cola[j+1];
+                cola[j+1]=temp;
+            }
+        }
+    }
+    cout<<"[SISTEMA] Cola virtual ordenada primero a los becados."<<endl;
 }

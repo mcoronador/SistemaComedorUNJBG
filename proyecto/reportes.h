@@ -3,8 +3,8 @@
 
 #include "estructuras.h"
 
-void reporterRaciones(int racionesTotales, int racionesEntregadas);
-void reporteAsistencia(Alumno cola[], int tamanoCola);
-void reporteCola(int tamanoCola);
+int cierreHorarioYSaldos(int racionesTotales, int asistentes);
+
+void atenderCola(Alumno cola[], int &tamanoCola, int racionesSobrantes);
 
 #endif

@@ -10,7 +10,7 @@ void mostrarMenuPrincipal() {
     cout << " [2] Gestionar TURNO: DESAYUNO\n";
     cout << " [3] Gestionar TURNO: ALMUERZO\n";
     cout << " [4] Gestionar TURNO: CENA\n";
-    cout << " [5] Actualizar Mermas del Dia\n";
+    cout << " [5] Registrar Cantidad de Platos:\n";
     cout << " [6] Salir del Sistema\n";
     cout << "===========================================================\n";
     cout << "Seleccione una opcion (1-6): ";
@@ -25,30 +25,28 @@ void mostrarSubmenuAlumnos() {
     cout << "    [3] Buscar alumno por codigo\n";
     cout << "    [4] Modificar datos de un alumno\n";
     cout << "    [5] Eliminar alumno\n";
-    cout << "    [6] Ordenar alumnos por nombre\n";
-    cout << "    [7] Volver al Menu Principal\n";
+    cout << "    [6] Volver al Menu Principal\n";
     cout << "===========================================================\n";
-    cout << "Seleccione una opcion (1-7): ";
+    cout << "Seleccione una opcion (1-6): ";
 }
  
 void mostrarSubmenuGestion(const string& nombreTurno) {
     cout << "===========================================================\n";
     cout << "         MENU DE GESTION: [TURNO " << nombreTurno << "]\n";
     cout << "===========================================================\n";
-    cout << "\n----- CONTROL DE ASISTENCIA -----\n";
+    cout << "\n--------------- CONTROL DE ASISTENCIA ----------------\n";
     cout << "    [1] Registrar Asistencia por Codigo Universitario\n";
     cout << "    [2] Listar Alumnos Becados Asistentes\n";
-    cout << "===========================================================\n";
-    cout << "\n----- LISTA DE ESPERA -----\n";
     cout << "    [3] Listar Alumnos Becados Faltantes\n";
+    cout << "===========================================================\n";
+    cout << "\n-------------- LISTA DE ESPERA ------------------------\n";
     cout << "    [4] Registrar Alumno No Becado en Lista de Espera\n";
     cout << "    [5] Listar Alumnos en la Cola Virtual\n";
-    cout << "    [6] Ordenar Cola Virtual\n";
     cout << "===========================================================\n";
-    cout << "\n----- PROCESAMIENTO -----\n";
-    cout << "    [7] Cierre de Horario (Calcular Saldos)\n";
-    cout << "    [8] Atender Cola Virtual (Asignar platos)\n";
-    cout << "    [9] Volver al Menu Principal\n";
+    cout << "\n----------- PROCESAMIENTO -----------------------------------\n";
+    cout << "    [6] Cierre de Horario (Calcular Saldos)\n";
+    cout << "    [7] Atender Cola Virtual (Asignar platos)\n";
+    cout << "    [8] Volver al Menu Principal\n";
     cout << "===========================================================\n";
-    cout << "Seleccione una opcion (1-9): ";
+    cout << "Seleccione una opcion (1-8): ";
 }

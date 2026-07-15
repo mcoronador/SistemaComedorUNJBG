@@ -66,19 +66,15 @@ int main() {
                         break;
  
                     case 6:
-                        ordenarAlumnosBecados(alumnos, cantidadAlumnos);
-                        system("pause");
                         break;
  
-                    case 7:
-                        break;
  
                     default:
                         cout << "\nOpcion no valida.\n";
                         system("pause");
                 }
  
-            } while (opcionAlumnos != 7);
+            } while (opcionAlumnos != 6);
  
         }
     	
@@ -137,13 +133,8 @@ int main() {
 					    system("pause");
 					    break;
                         
-                        
+          
                     case 6:
-					    ordenarCola(cola, cantidadCola);
-					    system("pause");
-					    break;
-
-                    case 7:
                      racionesSobrantes = cierreHorarioYSaldos(
                       racionesTotales[turno],
                        contarAsistentes(alumnos, cantidadAlumnos, turno)
@@ -151,12 +142,12 @@ int main() {
 					   system("pause");
                         break;
 
-                    case 8:
+                    case 7:
                        	atenderCola(cola, cantidadCola, racionesSobrantes);
                         system("pause");
                         break;
 
-                    case 9:
+                    case 8:
                         break;
 
                     default:
@@ -164,7 +155,7 @@ int main() {
                         system("pause");
                 }
 
-            } while (opcionSubmenu != 9);
+            } while (opcionSubmenu != 8);
 
         }
         else {

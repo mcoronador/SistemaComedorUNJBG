@@ -3,7 +3,8 @@
 
 using namespace std;
 
-void registrarCola(AlumnoNoBecado cola[], int &tamanoCola, AlumnoNoBecado nuevoAlumno) {
+void registrarCola(AlumnoNoBecado cola[], int &tamanoCola, AlumnoNoBecado nuevoAlumno) 
+{
     cola[tamanoCola]=nuevoAlumno;
     tamanoCola++;
 }
@@ -27,8 +28,63 @@ void mostrarCola(AlumnoNoBecado cola[], int tamanoCola){
     cout<<"============================================="<<endl;
 }
 
-void ordenarCola(AlumnoNoBecado cola[], int tamanoCola) { 
- 
-    cout<<"[SISTEMA] Cola virtual lista.	"<<endl;
-    //quizas no requiera ahora el ordenamiento, sin embargo para evitar errores de compilación....
+void registrarAlumnoNoBecado(
+    AlumnoNoBecado cola[],
+    int &tamanoCola,
+    int capacidadMax,
+    int turno)
+{
+    if (tamanoCola >= capacidadMax)
+    {
+        cout << "\nLa cola virtual esta llena.\n";
+        return;
+    }
+
+    AlumnoNoBecado nuevo;
+
+    cout << "\n====================================\n";
+    cout << " REGISTRAR ALUMNO NO BECADO\n";
+    cout << "====================================\n";
+
+    cout << "Ingrese codigo universitario: ";
+    cin >> nuevo.codigo;
+
+    for(int i=0;i<tamanoCola;i++)
+    {
+        if(cola[i].codigo == nuevo.codigo)
+        {
+            cout << "\nEste alumno ya esta registrado en la cola.\n";
+            return;
+        }
+    }
+
+    cin.ignore();
+
+    cout << "Ingrese nombre completo: ";
+    getline(cin,nuevo.nombre);
+
+    nuevo.turnoSolicitado = turno;
+    nuevo.atendido = false;
+
+    registrarCola(cola,tamanoCola,nuevo);
+
+    cout << "\nAlumno agregado correctamente a la cola virtual.\n";
+}
+
+void ordenarCola(AlumnoNoBecado cola[], int tamanoCola)
+{
+    for (int i = 0; i < tamanoCola - 1; i++)
+    {
+        for (int j = 0; j < tamanoCola - i - 1; j++)
+        {
+            if (cola[j].codigo > cola[j + 1].codigo)
+            {
+                AlumnoNoBecado aux = cola[j];
+                cola[j] = cola[j + 1];
+                cola[j + 1] = aux;
+            }
+        }
+    }
+
+    cout << "\nCola virtual ordenada correctamente.\n";
 }

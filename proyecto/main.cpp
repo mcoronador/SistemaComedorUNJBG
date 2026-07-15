@@ -135,21 +135,34 @@ int main() {
                         
           
                     case 6:
-                     racionesSobrantes = cierreHorarioYSaldos(
-                      racionesTotales[turno],
-                       contarAsistentes(alumnos, cantidadAlumnos, turno)
-                       );  
-					   system("pause");
-                        break;
 
-                    case 7:
+                     racionesSobrantes = cierreHorarioYSaldos(
+                     racionesTotales[turno],
+                     contarAsistentes(alumnos, cantidadAlumnos, turno)
+                    );
+
+                   system("pause");
+                    break;
+
+                	    
+                    case 7:{ 
+                        int asistentesReales = 0;
+                        for(int i = 0; i < cantidadAlumnos; i++){
+                            if(alumnos[i].asistio[turno]){ 
+                                asistentesReales++;
+                            }
+                    }
+                        cierreHorarioYSaldos(racionesTotales[turno], asistentesReales, racionesSobrantes);
+                        system("pause");
+                        break;
+                    }
+                    case 8:
+
                        	atenderCola(cola, cantidadCola, racionesSobrantes);
                         system("pause");
                         break;
 
-                    case 8:
-                        break;
-
+                  
                     default:
                         cout << "\nOpcion no valida.\n";
                         system("pause");

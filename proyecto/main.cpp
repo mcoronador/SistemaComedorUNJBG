@@ -133,27 +133,24 @@ int main() {
 					    system("pause");
 					    break;
                         
-          
                     case 6:
-
-                     racionesSobrantes = cierreHorarioYSaldos(
-                     racionesTotales[turno],
-                     contarAsistentes(alumnos, cantidadAlumnos, turno)
-                    );
+                  cierreHorarioYSaldos(
+        racionesTotales[turno],
+        contarAsistentes(alumnos, cantidadAlumnos, turno),
+        racionesSobrantes
+    );
 
                    system("pause");
                     break;
 
                 	    
                     case 7:{ 
-                        int asistentesReales = 0;
-                        for(int i = 0; i < cantidadAlumnos; i++){
-                            if(alumnos[i].asistio[turno]){ 
-                                asistentesReales++;
-                            }
-                    }
-                        cierreHorarioYSaldos(racionesTotales[turno], asistentesReales, racionesSobrantes);
-                        system("pause");
+                            cierreHorarioYSaldos(
+                               racionesTotales[turno],
+                                   0,
+                               racionesSobrantes
+                              );
+                     system("pause");
                         break;
                     }
                     case 8:

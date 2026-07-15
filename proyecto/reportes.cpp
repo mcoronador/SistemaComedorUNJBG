@@ -10,9 +10,9 @@ int cierreHorarioYSaldos(int racionesTotales, int asistentes) {
         sobrantes=0; 
     }
     
-    cout<<"=========================================\n"<<endl;
-    cout<<"|       CIERRE DE HORARIO Y SALDOS      |\n"<<endl;
-    cout<<"=========================================\n"<<endl;
+    cout<<"========================================="<<endl;
+    cout<<"|       CIERRE DE HORARIO Y SALDOS      |"<<endl;
+    cout<<"========================================="<<endl;
     cout<<"Raciones programadas totales: "<<racionesTotales<<endl;
     cout<<"Alumnos que ya asistieron   : "<<asistentes<<endl;
     cout<<"-----------------------------------------"<<endl;
@@ -23,20 +23,20 @@ int cierreHorarioYSaldos(int racionesTotales, int asistentes) {
 }
 
 void atenderCola(AlumnoNoBecado cola[], int &tamanoCola, int racionesSobrantes){
-    cout <<"\nIniciando proceso de atencion masiva de raciones sobrantes...\n"<<endl;
+    cout <<"\nIniciando proceso de atencion a la cola....."<<endl;
     
     if (tamanoCola==0){
         cout<<"No hay alumnos esperando en la cola virtual."<<endl;
         return;
     }
-    
- int entregadas = 0;
+    int racionesDisponibles = racionesSobrantes;
+    int atendidos = 0;
 
-    while (racionesSobrantes> 0 && tamanoCola>0) {
+    while (racionesDisponibles>0 && tamanoCola>0) {
 
         cout <<"Racion entregada a: "
              <<cola[0].nombre
-             <<endl;
+             <<"("<<cola[0].codigo<<")"<<endl;
 
         cola[0].atendido=true;
 
@@ -44,11 +44,12 @@ void atenderCola(AlumnoNoBecado cola[], int &tamanoCola, int racionesSobrantes){
             cola[i]=cola[i+1];
 
         tamanoCola--;
-        racionesSobrantes--;
-        entregadas++;
+        racionesDisponibles--;
+        atendidos++;
     }
-
-    cout<<"\nAtendidos : "<<entregadas<<endl;
+    cout<<"========================================="<<endl;
+    cout<<"\nAlumnos atendidos : "<<atendidos<<endl;
     cout<<"En cola   : "<<tamanoCola<<endl;
-    cout<<"Sobrantes : "<<racionesSobrantes<<endl;
+    cout<<"Raciones sobrantes : "<<racionesDisponibles<<endl;
+    cout<<"========================================="<<endl;
 }

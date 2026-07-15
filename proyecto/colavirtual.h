@@ -5,7 +5,6 @@
 
 void registrarCola(AlumnoNoBecado cola[], int &tamanoCola, AlumnoNoBecado nuevoAlumno);
 void mostrarCola(AlumnoNoBecado cola[], int tamanoCola);
-void ordenarCola(AlumnoNoBecado cola[], int tamanoCola);
 
 void registrarAlumnoNoBecado(
     AlumnoNoBecado cola[],

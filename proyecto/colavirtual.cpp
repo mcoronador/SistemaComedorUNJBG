@@ -17,11 +17,17 @@ void mostrarCola(AlumnoNoBecado cola[], int tamanoCola){
    	cout<<"============================================="<<endl;
     cout<<"|         ESTADO DE LA COLA VIRTUAL         |"<<endl;
    	cout<<"============================================="<<endl;
+   	
+   	string nombresTurno[TOTAL_TURNOS] = {
+    "DESAYUNO",
+    "ALMUERZO",
+    "CENA"
+};
     for (int i=0; i<tamanoCola; i++) {
         cout<<i+1
              << ". Codigo: " << cola[i].codigo
              << " | Nombre: " << cola[i].nombre
-             << " | Turno: " << cola[i].turnoSolicitado
+            << " | Turno: " << nombresTurno[cola[i].turnoSolicitado]
              << " | Estado: " << (cola[i].atendido ? "Atendido" : "En espera")
              << endl;
     }
@@ -71,20 +77,5 @@ void registrarAlumnoNoBecado(
     cout << "\nAlumno agregado correctamente a la cola virtual.\n";
 }
 
-void ordenarCola(AlumnoNoBecado cola[], int tamanoCola)
-{
-    for (int i = 0; i < tamanoCola - 1; i++)
-    {
-        for (int j = 0; j < tamanoCola - i - 1; j++)
-        {
-            if (cola[j].codigo > cola[j + 1].codigo)
-            {
-                AlumnoNoBecado aux = cola[j];
-                cola[j] = cola[j + 1];
-                cola[j + 1] = aux;
-            }
-        }
-    }
 
-    cout << "\nCola virtual ordenada correctamente.\n";
-}
+

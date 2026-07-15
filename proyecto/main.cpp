@@ -3,6 +3,7 @@
 #include "estructuras.h"
 #include "alumnos.h"
 #include "colavirtual.h"
+#include "reportes.h	"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ int main() {
     int cantidadCola = 0;
     
     int racionesTotales[TOTAL_TURNOS] = {0, 0, 0};
+    int racionesSobrantes=0;
  
     int opcionPrincipal;
     do {
@@ -142,12 +144,12 @@ int main() {
 					    break;
 
                     case 7:
-                        cout << "\nModulo 3.\n";
+                        racionesSobrantes = cierreHorarioYSaldos(racionesTotales[turno], cantidadAlumnos);
                         system("pause");
                         break;
 
                     case 8:
-                        cout << "\nModulo 3.\n";
+                       	atenderCola(cola, cantidadCola, racionesSobrantes);
                         system("pause");
                         break;
 

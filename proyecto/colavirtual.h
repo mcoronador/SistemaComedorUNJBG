@@ -3,8 +3,8 @@
 
 #include "estructuras.h"
 
-void registrarCola(Alumno cola[], int &tamanoCola, Alumno nuevoAlumno);
-void mostrarCola(Alumno cola[], int tamanoCola);
-void ordenarCola(Alumno cola[], int tamanoCola);
+void registrarCola(AlumnoNoBecado cola[], int &tamanoCola, AlumnoNoBecado nuevoAlumno);
+void mostrarCola(AlumnoNoBecado cola[], int tamanoCola);
+void ordenarCola(AlumnoNoBecado cola[], int tamanoCola);
 
 #endif

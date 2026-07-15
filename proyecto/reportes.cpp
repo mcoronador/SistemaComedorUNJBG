@@ -52,4 +52,20 @@ void atenderCola(AlumnoNoBecado cola[], int &tamanoCola, int racionesSobrantes){
     cout<<"En cola   : "<<tamanoCola<<endl;
     cout<<"Raciones sobrantes : "<<racionesDisponibles<<endl;
     cout<<"========================================="<<endl;
+           
+}
+
+int contarAsistentes(AlumnoBecado alumnos[], int cantidadAlumnos, int turno)
+{
+    int asistentes = 0;
+
+    for (int i = 0; i < cantidadAlumnos; i++)
+    {
+        if (alumnos[i].asistio[turno])
+        {
+            asistentes++;
+        }
+    }
+
+    return asistentes;
 }

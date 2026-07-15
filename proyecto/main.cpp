@@ -20,7 +20,7 @@ int main() {
     int cantidadCola = 0;
     
     int racionesTotales[TOTAL_TURNOS] = {0, 0, 0};
-    int racionesSobrantes=0;
+     int racionesSobrantes[TOTAL_TURNOS] = {0,0,0};
  
     int opcionPrincipal;
     do {
@@ -134,30 +134,26 @@ int main() {
 					    break;
                         
                     case 6:
-                  cierreHorarioYSaldos(
+                   cierreHorarioYSaldos(
         racionesTotales[turno],
         contarAsistentes(alumnos, cantidadAlumnos, turno),
-        racionesSobrantes
+        racionesSobrantes[turno]
     );
+    system("pause");
+    break;
+    
+                    case 7:  
+					atenderCola(
+        cola,
+        cantidadCola,
+        racionesSobrantes[turno]
+    );
+    system("pause");
+    break;
 
-                   system("pause");
-                    break;
-
-                	    
-                    case 7:{ 
-                            cierreHorarioYSaldos(
-                               racionesTotales[turno],
-                                   0,
-                               racionesSobrantes
-                              );
-                     system("pause");
-                        break;
-                    }
                     case 8:
 
-                       	atenderCola(cola, cantidadCola, racionesSobrantes);
-                        system("pause");
-                        break;
+                         break;
 
                   
                     default:

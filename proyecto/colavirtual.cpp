@@ -17,8 +17,12 @@ void mostrarCola(AlumnoNoBecado cola[], int tamanoCola){
     cout<<"|         ESTADO DE LA COLA VIRTUAL         |"<<endl;
    	cout<<"=============================================<<endl;
     for (int i=0; i<tamanoCola; i++) {
-        cout<<i + 1<<". "<<cola[i].nombre
-            <<endl;
+        cout<<i+1
+             << ". Codigo: " << cola[i].codigo
+             << " | Nombre: " << cola[i].nombre
+             << " | Turno: " << cola[i].turnoSolicitado
+             << " | Estado: " << (cola[i].atendido ? "Atendido" : "En espera")
+             << endl;
     }
     cout<<"============================================="<<endl;
 }
@@ -26,4 +30,5 @@ void mostrarCola(AlumnoNoBecado cola[], int tamanoCola){
 void ordenarCola(AlumnoNoBecado cola[], int tamanoCola) { 
  
     cout<<"[SISTEMA] Cola virtual lista.	"<<endl;
+    //quizas no requiera ahora el ordenamiento, sin embargo para evitar errores de compilación....
 }

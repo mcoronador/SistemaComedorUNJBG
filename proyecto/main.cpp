@@ -3,7 +3,7 @@
 #include "estructuras.h"
 #include "alumnos.h"
 #include "colavirtual.h"
-#include "reportes.h	"
+#include "reportes.h"
 
 using namespace std;
 

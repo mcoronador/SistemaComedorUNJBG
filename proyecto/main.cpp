@@ -147,7 +147,8 @@ int main() {
                      racionesSobrantes = cierreHorarioYSaldos(
                       racionesTotales[turno],
                        contarAsistentes(alumnos, cantidadAlumnos, turno)
-);                        system("pause");
+                       );  
+					   system("pause");
                         break;
 
                     case 8:

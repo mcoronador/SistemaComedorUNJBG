@@ -79,5 +79,18 @@ void registrarAlumnoNoBecado(
 
 void ordenarCola(AlumnoNoBecado cola[], int tamanoCola)
 {
-    // No se requiere ordenamiento por ahora.
+    for (int i = 0; i < tamanoCola - 1; i++)
+    {
+        for (int j = 0; j < tamanoCola - i - 1; j++)
+        {
+            if (cola[j].codigo > cola[j + 1].codigo)
+            {
+                AlumnoNoBecado aux = cola[j];
+                cola[j] = cola[j + 1];
+                cola[j + 1] = aux;
+            }
+        }
+    }
+
+    cout << "\nCola virtual ordenada correctamente.\n";
 }

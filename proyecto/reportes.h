@@ -5,6 +5,6 @@
 
 int cierreHorarioYSaldos(int racionesTotales, int asistentes);
 
-void atenderCola(Alumno cola[], int &tamanoCola, int racionesSobrantes);
+void atenderCola(AlumnoNoBecado cola[], int &tamanoCola, int racionesSobrantes);
 
 #endif

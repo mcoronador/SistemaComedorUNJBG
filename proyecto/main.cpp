@@ -135,9 +135,9 @@ int main() {
                         
                         
                     case 6:
-                        cout << "\nModulo 3.\n";
-                        system("pause");
-                        break;
+					    ordenarCola(cola, cantidadCola);
+					    system("pause");
+					    break;
 
                     case 7:
                         cout << "\nModulo 3.\n";

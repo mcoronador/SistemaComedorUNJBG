@@ -2,6 +2,7 @@
 #include "menu.h"
 #include "estructuras.h"
 #include "alumnos.h"
+#include "colavirtual.h"
 
 using namespace std;
 
@@ -114,22 +115,26 @@ int main() {
                         break;
                         
                      case 3:
-                        cout << "\n modulo 2.\n";
-                        system("pause");
-                        break;
+    					listarFaltantes(alumnos, cantidadAlumnos, turno);
+    					system("pause");
+    					break;
 
                     case 4:
-                        cout << " modulo \n2.\n";
-                        system("pause");
-                        break;
+				    registrarAlumnoNoBecado(
+				        cola,
+				        cantidadCola,
+				        CAPACIDAD_COLA,
+				        turno);
+				    system("pause");
+				    break;
 
                     case 5:
-                        cout << "modulo \n2.\n";
-                        system("pause");
-                        break;
+					    mostrarCola(cola, cantidadCola);
+					    system("pause");
+					    break;
                         
                         
-                         case 6:
+                    case 6:
                         cout << "\nModulo 3.\n";
                         system("pause");
                         break;

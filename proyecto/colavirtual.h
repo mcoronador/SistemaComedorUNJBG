@@ -13,8 +13,4 @@ void registrarAlumnoNoBecado(
     int capacidadMax,
     int turno);
 
-void mostrarCola(AlumnoNoBecado cola[], int tamanoCola);
-
-void ordenarCola(AlumnoNoBecado cola[], int tamanoCola);
-
 #endif

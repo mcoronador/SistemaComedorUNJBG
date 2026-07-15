@@ -145,12 +145,12 @@ int main() {
 
                     case 7:{ 
                         int asistentesReales = 0;
-                        for (int i = 0; i < cantidadAlumnos; i++) {
-                            if (alumnos[i].asistio) {
+                        for(int i = 0; i < cantidadAlumnos; i++){
+                            if(alumnos[i].asistio[turno]){ 
                                 asistentesReales++;
                             }
-                        }
-                        racionesSobrantes = cierreHorarioYSaldos(racionesTotales[turno], asistentesReales);
+                    }
+                        cierreHorarioYSaldos(racionesTotales[turno], asistentesReales, racionesSobrantes);
                         system("pause");
                         break;
                     }

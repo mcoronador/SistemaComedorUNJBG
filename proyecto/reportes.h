@@ -3,8 +3,8 @@
 
 #include "estructuras.h"
 
-int cierreHorarioYSaldos(int racionesTotales, int asistentes);
+int cierreHorarioYSaldos(int racionesTotales, int asistentes, int &racionesSobrantes);
 
-void atenderCola(AlumnoNoBecado cola[], int &tamanoCola, int racionesSobrantes);
+void atenderCola(AlumnoNoBecado cola[], int &tamanoCola, int &racionesSobrantes);
 
 #endif

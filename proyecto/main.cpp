@@ -143,11 +143,17 @@ int main() {
 					    system("pause");
 					    break;
 
-                    case 7:
-                        racionesSobrantes = cierreHorarioYSaldos(racionesTotales[turno], cantidadAlumnos);
+                    case 7:{ 
+                        int asistentesReales = 0;
+                        for (int i = 0; i < cantidadAlumnos; i++) {
+                            if (alumnos[i].asistio) {
+                                asistentesReales++;
+                            }
+                        }
+                        racionesSobrantes = cierreHorarioYSaldos(racionesTotales[turno], asistentesReales);
                         system("pause");
                         break;
-
+                    }
                     case 8:
                        	atenderCola(cola, cantidadCola, racionesSobrantes);
                         system("pause");

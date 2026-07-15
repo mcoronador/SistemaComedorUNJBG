@@ -17,6 +17,8 @@ int main() {
  
     AlumnoNoBecado cola[CAPACIDAD_COLA];
     int cantidadCola = 0;
+    
+    int racionesTotales[TOTAL_TURNOS] = {0, 0, 0};
  
     int opcionPrincipal;
     do {
@@ -164,14 +166,26 @@ int main() {
 
             switch (opcionPrincipal) {
 
-                case 4:
-                    cout << "\nModulo de Reportes Generales.\n";
-                    system("pause");
-                    break;
-
                 case 5:
-                    cout << "\nGracias por utilizar COMEDOR-SGO.\n";
-                    break;
+				    system("cls");
+				
+				    cout << "=====================================\n";
+				    cout << "   CONFIGURAR RACIONES DEL DIA\n";
+				    cout << "=====================================\n";
+				
+				    cout << "Cantidad de raciones para DESAYUNO: ";
+				    cin >> racionesTotales[0];
+				
+				    cout << "Cantidad de raciones para ALMUERZO: ";
+				    cin >> racionesTotales[1];
+				
+				    cout << "Cantidad de raciones para CENA: ";
+				    cin >> racionesTotales[2];
+				
+				    cout << "\nRaciones registradas correctamente.\n";
+				
+				    system("pause");
+				    break;
 
                 default:
                     cout << "\nOpcion no valida.\n";

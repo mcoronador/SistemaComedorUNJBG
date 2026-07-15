@@ -10,7 +10,7 @@ void mostrarMenuPrincipal() {
     cout << " [2] Gestionar TURNO: DESAYUNO\n";
     cout << " [3] Gestionar TURNO: ALMUERZO\n";
     cout << " [4] Gestionar TURNO: CENA\n";
-    cout << " [5] Ver Reportes Globales y Mermas del Dia\n";
+    cout << " [5] Actualizar Mermas del Dia\n";
     cout << " [6] Salir del Sistema\n";
     cout << "===========================================================\n";
     cout << "Seleccione una opcion (1-6): ";
